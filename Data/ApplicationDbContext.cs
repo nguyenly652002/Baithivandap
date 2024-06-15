@@ -6,5 +6,6 @@ namespace NguyenThiKhanhLy_424.Data{
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options){}
 
         public DbSet<Lophoc>Lophoc {get;set;}
+        public DbSet<NguyenThiKhanhLy_424.Sinhvien> Sinhvien { get; set; } = default!;
     }
 }
