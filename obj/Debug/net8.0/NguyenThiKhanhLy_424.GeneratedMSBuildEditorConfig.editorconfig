@@ -17,79 +17,79 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NguyenThiKhanhLy_424
 build_property.RootNamespace = NguyenThiKhanhLy_424
-build_property.ProjectDir = E:\Baithivandap\NguyenThiKhanhLy_424\
+build_property.ProjectDir = E:\NTKL_BAITHI2324\NguyenThiKhanhLy_424\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Baithivandap\NguyenThiKhanhLy_424
+build_property.MSBuildProjectDirectory = E:\NTKL_BAITHI2324\NguyenThiKhanhLy_424
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Home/Index.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Home/Privacy.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Person/Create.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Person/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Person/Delete.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Person/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Person/Details.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Person/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Person/Edit.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Person/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Person/Index.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Person/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Shared/Error.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Sinhvien/Create.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Sinhvien/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Sinhvien/Delete.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Sinhvien/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Sinhvien/Details.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Sinhvien/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Sinhvien/Edit.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Sinhvien/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Sinhvien/Index.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Sinhvien/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2luaHZpZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/_ViewImports.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/_ViewStart.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Baithivandap/NguyenThiKhanhLy_424/Views/Shared/_Layout.cshtml]
+[E:/NTKL_BAITHI2324/NguyenThiKhanhLy_424/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zzexdy37kk
