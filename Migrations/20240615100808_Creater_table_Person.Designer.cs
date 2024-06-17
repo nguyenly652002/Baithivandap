@@ -10,8 +10,8 @@ using NguyenThiKhanhLy_424.Data;
 namespace NguyenThiKhanhLy_424.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240615100808_Creater_table_Lophoc")]
-    partial class Creater_table_Lophoc
+    [Migration("20240615100808_Creater_table_Person")]
+    partial class Creater_table_Person
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace NguyenThiKhanhLy_424.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
 
-            modelBuilder.Entity("NguyenThiKhanhLy_424.Lophoc", b =>
+            modelBuilder.Entity("NguyenThiKhanhLy_424.Person", b =>
                 {
                     b.Property<string>("MaLop")
                         .HasColumnType("TEXT");
@@ -32,7 +32,7 @@ namespace NguyenThiKhanhLy_424.Migrations
 
                     b.HasKey("MaLop");
 
-                    b.ToTable("Lophocs");
+                    b.ToTable("Persons");
                 });
 #pragma warning restore 612, 618
         }

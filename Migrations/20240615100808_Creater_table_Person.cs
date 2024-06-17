@@ -5,13 +5,13 @@
 namespace NguyenThiKhanhLy_424.Migrations
 {
     /// <inheritdoc />
-    public partial class Creater_table_Lophoc : Migration
+    public partial class Creater_table_Person : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Lophocs",
+            migrationBuildcser.CreateTable(
+                name: "Persons",
                 columns: table => new
                 {
                     MaLop = table.Column<string>(type: "TEXT", nullable: false),
@@ -20,7 +20,7 @@ namespace NguyenThiKhanhLy_424.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Lophocs", x => x.MaLop);
+                    table.PrimaryKey("PK_Persons", x => x.MaLop);
                 });
         }
 
