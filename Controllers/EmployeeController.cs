@@ -5,28 +5,27 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NguyenThiKhanhLy_424;
 using NguyenThiKhanhLy_424.Data;
+using NguyenThiKhanhLy_424.Models;
 
 namespace NguyenThiKhanhLy_424.Controllers
 {
-    public class SinhvienController : Controller
+    public class EmployeeController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public SinhvienController(ApplicationDbContext context)
+        public EmployeeController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Sinhvien
+        // GET: Employee
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Sinhvien.Include(s => s.Lophoc);
-            return View(await applicationDbContext.ToListAsync());
+            return View(await _context.Employee.ToListAsync());
         }
 
-        // GET: Sinhvien/Details/5
+        // GET: Employee/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -34,42 +33,39 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var sinhvien = await _context.Sinhvien
-                .Include(s => s.Lophoc)
-                .FirstOrDefaultAsync(m => m.Masinhvien == id);
-            if (sinhvien == null)
+            var employee = await _context.Employee
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (employee == null)
             {
                 return NotFound();
             }
 
-            return View(sinhvien);
+            return View(employee);
         }
 
-        // GET: Sinhvien/Create
+        // GET: Employee/Create
         public IActionResult Create()
         {
-            ViewData["MaLop"] = new SelectList(_context.Lophoc, "MaLop", "MaLop");
             return View();
         }
 
-        // POST: Sinhvien/Create
+        // POST: Employee/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Masinhvien,Tensinhvien,MaLop")] Sinhvien sinhvien)
+        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address")] Employee employee)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(sinhvien);
+                _context.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLop"] = new SelectList(_context.Lophoc, "MaLop", "MaLop", sinhvien.MaLop);
-            return View(sinhvien);
+            return View(employee);
         }
 
-        // GET: Sinhvien/Edit/5
+        // GET: Employee/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -77,23 +73,22 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var sinhvien = await _context.Sinhvien.FindAsync(id);
-            if (sinhvien == null)
+            var employee = await _context.Employee.FindAsync(id);
+            if (employee == null)
             {
                 return NotFound();
             }
-            ViewData["MaLop"] = new SelectList(_context.Lophoc, "MaLop", "MaLop", sinhvien.MaLop);
-            return View(sinhvien);
+            return View(employee);
         }
 
-        // POST: Sinhvien/Edit/5
+        // POST: Employee/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Masinhvien,Tensinhvien,MaLop")] Sinhvien sinhvien)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address")] Employee employee)
         {
-            if (id != sinhvien.Masinhvien)
+            if (id != employee.PersonId)
             {
                 return NotFound();
             }
@@ -102,12 +97,12 @@ namespace NguyenThiKhanhLy_424.Controllers
             {
                 try
                 {
-                    _context.Update(sinhvien);
+                    _context.Update(employee);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SinhvienExists(sinhvien.Masinhvien))
+                    if (!EmployeeExists(employee.PersonId))
                     {
                         return NotFound();
                     }
@@ -118,11 +113,10 @@ namespace NguyenThiKhanhLy_424.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLop"] = new SelectList(_context.Lophoc, "MaLop", "MaLop", sinhvien.MaLop);
-            return View(sinhvien);
+            return View(employee);
         }
 
-        // GET: Sinhvien/Delete/5
+        // GET: Employee/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -130,35 +124,34 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var sinhvien = await _context.Sinhvien
-                .Include(s => s.Lophoc)
-                .FirstOrDefaultAsync(m => m.Masinhvien == id);
-            if (sinhvien == null)
+            var employee = await _context.Employee
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (employee == null)
             {
                 return NotFound();
             }
 
-            return View(sinhvien);
+            return View(employee);
         }
 
-        // POST: Sinhvien/Delete/5
+        // POST: Employee/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var sinhvien = await _context.Sinhvien.FindAsync(id);
-            if (sinhvien != null)
+            var employee = await _context.Employee.FindAsync(id);
+            if (employee != null)
             {
-                _context.Sinhvien.Remove(sinhvien);
+                _context.Employee.Remove(employee);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SinhvienExists(string id)
+        private bool EmployeeExists(string id)
         {
-            return _context.Sinhvien.Any(e => e.Masinhvien == id);
+            return _context.Employee.Any(e => e.PersonId == id);
         }
     }
 }

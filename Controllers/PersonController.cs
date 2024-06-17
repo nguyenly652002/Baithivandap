@@ -10,23 +10,22 @@ using NguyenThiKhanhLy_424.Data;
 
 namespace NguyenThiKhanhLy_424.Controllers
 {
-    //NguyenThiKhanhLy
-    public class LophocController : Controller
+    public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public LophocController(ApplicationDbContext context)
+        public PersonController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Lophoc
+        // GET: Person
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Lophoc.ToListAsync());
+            return View(await _context.Person.ToListAsync());
         }
 
-        // GET: Lophoc/Details/5
+        // GET: Person/Details/5
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
@@ -34,39 +33,39 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var lophoc = await _context.Lophoc
-                .FirstOrDefaultAsync(m => m.MaLop == id);
-            if (lophoc == null)
+            var person = await _context.Person
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (person == null)
             {
                 return NotFound();
             }
 
-            return View(lophoc);
+            return View(person);
         }
 
-        // GET: Lophoc/Create
+        // GET: Person/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Lophoc/Create
+        // POST: Person/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaLop,TenLop,SoTT")] Lophoc lophoc)
+        public async Task<IActionResult> Create([Bind("PersonId,FullName,Address")] Person person)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(lophoc);
+                _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(lophoc);
+            return View(person);
         }
 
-        // GET: Lophoc/Edit/5
+        // GET: Person/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var lophoc = await _context.Lophoc.FindAsync(id);
-            if (lophoc == null)
+            var person = await _context.Person.FindAsync(id);
+            if (person == null)
             {
                 return NotFound();
             }
-            return View(lophoc);
+            return View(person);
         }
 
-        // POST: Lophoc/Edit/5
+        // POST: Person/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaLop,TenLop,SoTT")] Lophoc lophoc)
+        public async Task<IActionResult> Edit(string id, [Bind("PersonId,FullName,Address")] Person person)
         {
-            if (id != lophoc.MaLop)
+            if (id != person.PersonId)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace NguyenThiKhanhLy_424.Controllers
             {
                 try
                 {
-                    _context.Update(lophoc);
+                    _context.Update(person);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LophocExists(lophoc.MaLop))
+                    if (!PersonExists(person.PersonId))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace NguyenThiKhanhLy_424.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(lophoc);
+            return View(person);
         }
 
-        // GET: Lophoc/Delete/5
+        // GET: Person/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -125,34 +124,34 @@ namespace NguyenThiKhanhLy_424.Controllers
                 return NotFound();
             }
 
-            var lophoc = await _context.Lophoc
-                .FirstOrDefaultAsync(m => m.MaLop == id);
-            if (lophoc == null)
+            var person = await _context.Person
+                .FirstOrDefaultAsync(m => m.PersonId == id);
+            if (person == null)
             {
                 return NotFound();
             }
 
-            return View(lophoc);
+            return View(person);
         }
 
-        // POST: Lophoc/Delete/5
+        // POST: Person/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var lophoc = await _context.Lophoc.FindAsync(id);
-            if (lophoc != null)
+            var person = await _context.Person.FindAsync(id);
+            if (person != null)
             {
-                _context.Lophoc.Remove(lophoc);
+                _context.Person.Remove(person);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LophocExists(string id)
+        private bool PersonExists(string id)
         {
-            return _context.Lophoc.Any(e => e.MaLop == id);
+            return _context.Person.Any(e => e.PersonId == id);
         }
     }
 }

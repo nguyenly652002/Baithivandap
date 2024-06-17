@@ -3,16 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NguyenThiKhanhLy_424
 {
-    [Table("Lophocs")]
-    public class Lophoc 
+    [Table("Persons")]
+    public class Person 
     {
         
         [Key]
-        public string? MaLop { get; set; }
-
-        public int TenLop { get; set; }
-
-        public string? SoTT { get; set; }
+    public string? PersonId {get; set;}
+   public string? FullName {get; set;}
+    
+    public string? Address {get; set;}
 
         
 

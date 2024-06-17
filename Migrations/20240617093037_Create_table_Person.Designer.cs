@@ -10,8 +10,8 @@ using NguyenThiKhanhLy_424.Data;
 namespace NguyenThiKhanhLy_424.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240615100808_Creater_table_Person")]
-    partial class Creater_table_Person
+    [Migration("20240617093037_Create_table_Person")]
+    partial class Create_table_Person
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,16 +21,16 @@ namespace NguyenThiKhanhLy_424.Migrations
 
             modelBuilder.Entity("NguyenThiKhanhLy_424.Person", b =>
                 {
-                    b.Property<string>("MaLop")
+                    b.Property<string>("PersonId")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SoTT")
+                    b.Property<string>("Address")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("TenLop")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("FullName")
+                        .HasColumnType("TEXT");
 
-                    b.HasKey("MaLop");
+                    b.HasKey("PersonId");
 
                     b.ToTable("Persons");
                 });
