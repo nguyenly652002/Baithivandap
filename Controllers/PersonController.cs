@@ -10,6 +10,7 @@ using NguyenThiKhanhLy_424.Data;
 
 namespace NguyenThiKhanhLy_424.Controllers
 {
+    //NguyenThiKhanhLy
     public class LophocController : Controller
     {
         private readonly ApplicationDbContext _context;
